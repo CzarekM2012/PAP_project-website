@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style1.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart home controller</title>
+</head>
+<body id="layout">
+    <p id="averagesLayout">
+        <svg width="100%" height="100" id="avgTempField">
+            <circle cx="50%" cy="50%" r="40%" stroke="gray" stroke-width="4" fill="yellow"/>
+            <text x="12.5%" y="45%">Średnia temperatura</text>
+            <text x="35%" y="55%">w budynku</text>
+            <text x="40%" y="65%" class="value" id="avgTemp">wqer</text>
+        </svg>
+        <svg width="100%" height="100" id="waterTempField">
+            <circle cx="50%" cy="50%" r="40%" stroke="gray" stroke-width="4" fill="yellow"/>
+            <text x="12.5%" y="45%">Temperatura wody</text>
+            <text x="40%" y="55%" class="value" id="avgTemp">wqer</text>
+        </svg>
+        <svg width="100%" height="100" id="energyConsumField">
+            <circle cx="50%" cy="50%" r="40%" stroke="gray" stroke-width="4" fill="yellow"/>
+            <text x="12.5%" y="45%">Zużycie prądu</text>
+            <text x="40%" y="55%" class="value" id="avgTemp">wqer</text>
+        </svg>
+        <svg width="100%" height="100" id="isElectricityField">
+            <circle cx="50%" cy="50%" r="40%" stroke="gray" stroke-width="4" fill="red"/>
+            <text x="12.5%" y="50%">Prąd</text>
+        </svg>
+    </p>
+    <p id="someGraphic" style="background-color: violet;">
+    </p>
+    <p id="buttonsLayout" style="background-color: green;">
+        <button id="airTemperatureButton" onclick="goToAirTemperatureDiagrams">Temperatura powietrza</button>
+        <button id="waterTemperatureButton" onclick="goToWaterTemperatureDiagram()">Temperatura wody</button>
+        <button id="humidityButton" onclick="goToHumidityDiagram">Wilgotność</button>
+        <button id="energyConsumptionButton" onclick="goToEnergyConsumptionDiagram()">Zużycie prądu</button>
+        <button id="lightingSwitch" onclick="switchLighting()">Oświetlenie</button>
+        <object id="waterPumpLayout">
+            <input type="range" id="waterPumpSlider" min="20" max="50" onchange="updateOutput(this.value)">
+            <label id="waterPumpValue">liczba</label>
+            <label id="waterPumpLabel" for="waterPump">Pompa ciepła - ustawianie temperatury</label>
+            <button id="waterPumpConfirm" onclick="setWaterPumpTemp()">Potwierdź</button>
+        </object>
+        <button id="monitoringButton" onclick="goToVideos()">Monitoring</button>
+        <object id="ironRemoverLayout">
+            <button id="delayIronRemoverActivation" onclick="delayIronRemover()">+15min</button>
+            <label id="ironRemoverActivationTime">Czas uruchomienia odżelaziacza</label>
+        </object>
+        <button id="sprinklersSwitch" onclick="switchSprinklers()">Spryskiwacze</button>
+    </p>
+</body>
+<script src="script1.js"></script>
+</html>
