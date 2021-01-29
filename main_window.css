@@ -132,6 +132,11 @@ body
     text-align: center;
 }
 
+#delayIronRemoverActivation{
+    height: 2em;
+    align-self: flex-end;
+}
+
 #waterPumpSlider
 {
     grid-column: 1 / 3;
@@ -147,6 +152,8 @@ body
 }
 #waterPumpConfirm
 {
+    align-self: flex-end;
+    height: 2em;
     grid-column: 1 / 4;
 }
 
