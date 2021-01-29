@@ -1,3 +1,5 @@
-const button = document.getElementById("hello_button")
+const urlParams = new URLSearchParams(window.location.search);
+const roomParam = urlParams.get('room');
 
-button.addEventListener("click", function () { alert("Hello!") })
+var room_select = document.getElementById("rooms");
+room_select.value = roomParam
