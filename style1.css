@@ -5,6 +5,7 @@ body
     background-size:contain;
     background-color: rgb(105, 104, 104);
     height: auto;
+    width: auto;
 }
 
 #someGraphic{
@@ -56,6 +57,11 @@ body
     -1px 1px 0 #000,
     1px 1px 0 #000;
 }
+
+#buttonsLayout button:active{
+    transform: scale(0.99);
+}
+
 
 #ironRemoverLayout button{
     border-radius: 80px;
