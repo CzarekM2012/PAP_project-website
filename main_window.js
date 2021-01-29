@@ -45,7 +45,7 @@ function goToDiagram(room, parameter)
     //document.getElementById("parameters").value = "waterTemperature";
 }
 
-sprinklerState = 0
+sprinklerState = 1
 function switchSprinklers(){
     if(sprinklerState == 1){
         document.getElementById("sprinklersSwitch").style.background='linear-gradient(rgb(148, 63, 63), rgb(200, 63, 63) )';

@@ -6,6 +6,7 @@ body
     background-color: rgb(105, 104, 104);
 }
 
+
 #layout
 {
     display: grid;
@@ -39,6 +40,20 @@ body
     /* removes the clicking effect */
 }
 
+#buttonsLayout button:active{
+    transform: scale(0.99);
+}
+
+#buttonsLayout button:hover{
+    background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+
+#ironRemoverLayout button{
+    border-radius: 80px;
+}
+
+
 #waterPumpValue{
     font-size: 3vw;
 }
@@ -50,10 +65,6 @@ body
     /* background: linear-gradient(grey, white); */
     background: linear-gradient(cyan, pink);
     padding: 10px 10px 10px 10px;
-}
-
-#sprinklersSwitch{
-    background: green;
 }
 
 #buttonsLayout button{
@@ -70,19 +81,10 @@ body
     0.03vw 0.03vw 0 #000;
 }
 
-#buttonsLayout button:active{
-    transform: scale(0.99);
+#buttonsLayout #sprinklersSwitch{
+    /* assumes sprinklers are ON by default */
+    background: linear-gradient(green, lightgreen);
 }
-
-#buttonsLayout button:hover{
-    background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
-	background-color:#bab1ba;
-}
-
-#ironRemoverLayout button{
-    border-radius: 80px;
-}
-
 
 
 #buttonsLayout
@@ -144,3 +146,4 @@ body
 {
     grid-column: 1 / 4;
 }
+
