@@ -142,6 +142,7 @@ body
 }
 #waterPumpLabel
 {
+    text-align: center;
     grid-column: 1 / 4;
 }
 #waterPumpConfirm
