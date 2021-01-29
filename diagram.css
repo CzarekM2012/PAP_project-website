@@ -37,6 +37,7 @@ body
 
 #chart
 {
+    background-color: white;
     grid-row: 2/11;
     grid-column: 1/6;
 }

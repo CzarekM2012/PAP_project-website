@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="main_window.css">
 <head>
     <meta charset="UTF-8">
     <title>Smart home controller</title>
@@ -23,11 +23,11 @@
             <label>Prąd<br></label>
             <h4>Tak</h4>
         </button>
-    <p id="buttonsLayout" style="background-color: white;">
-        <button id="airTemperatureButton" onclick="goToAirTemperatureDiagrams">Temperatura powietrza</button>
-        <button id="waterTemperatureButton" onclick="goToWaterTemperatureDiagram()">Temperatura wody</button>
-        <button id="humidityButton" onclick="goToHumidityDiagram">Wilgotność</button>
-        <button id="energyConsumptionButton" onclick="goToEnergyConsumptionDiagram()">Zużycie prądu</button>
+    <p id="buttonsLayout">
+        <button id="airTemperatureButton" onclick="document.location.href = 'diagram.html?parameter=airTemperature'">Temperatura powietrza</button>
+        <button id="waterTemperatureButton" onclick="document.location.href = 'diagram.html?parameter=waterTemperature'">Temperatura wody</button>
+        <button id="humidityButton" onclick="document.location.href = 'diagram.html?parameter=humidity'">Wilgotność</button>
+        <button id="energyConsumptionButton" onclick="document.location.href = 'diagram.html?parameter=energyConsumption'">Zużycie prądu</button>
         <button id="lightingSwitch" onclick="switchLighting()">Oświetlenie</button>
         <object id="waterPumpLayout">
             <input type="range" id="waterPumpSlider" min="20" max="50" onchange="updateWaterPumpValue(this.value)">
@@ -43,5 +43,5 @@
         <button id="sprinklersSwitch" onclick="switchSprinklers()">Spryskiwacze</button>
     </p>
 </body>
-<script src="script1.js"></script>
+<script src="main_window.js"></script>
 </html>

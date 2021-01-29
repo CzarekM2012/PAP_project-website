@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="diagram.css">
 <head>
     <meta charset="UTF-8">
     <title>Smart home controller - diagram</title>
@@ -9,25 +9,25 @@
   <div id="layout">
     <p id="choices">
       <select name="rooms" id="rooms">
-        <option selected disabled hidden>pomieszczenie</option>
-        <option value="kuchnia">kuchnia</option>
-        <option value="łazienka">łazienka</option>
-        <option value="pokój">pokój</option>
-        <option value="piwnica">piwnica</option>
-        <option value="salon">salon</option>
+        <option selected disabled hidden value="default">pomieszczenie</option>
+        <option value="kitchen">kuchnia</option>
+        <option value="bathroom">łazienka</option>
+        <option value="room">pokój</option>
+        <option value="cellar">piwnica</option>
+        <option value="livingRoom">salon</option>
       </select>
       <select name="parameters" id="parameters">
-        <option selected disabled hidden>parametr</option>
+        <option disabled hidden value="default">parametr</option>
         <option value="airTemperature">temperatura powietrza</option>
         <option value="waterTemperature">temperatura wody</option>
         <option value="humidity">wilgotność</option>
         <option value="energyConsumption">zużycie prądu</option>
       </select>
-      <button id="returnButton">return</button>
+      <button id="returnButton" onclick="document.location.href = 'main_window.html'">return</button>
     </p>
-    <p id="chart" style="background-color: white;">
+    <p id="chart">
     </p>
   </div>
 </body>
-<script src="script2.js"></script>
+<script src="diagram.js"></script>
 </html>
