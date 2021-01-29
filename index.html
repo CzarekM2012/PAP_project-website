@@ -31,9 +31,9 @@
         <button id="energyGenerationButton" onclick="document.location.href = 'diagram.html?parameter=energyGeneration'">Generowanie prądu</button>
         <button id="monitoringButton" onclick="document.location.href = 'recordings'">Monitoring</button>
         <object id="waterPumpLayout">
-            <label id="waterPumpValue">&nbsp;&nbsp;20</label>
-            <input type="range" id="waterPumpSlider" min="10" max="30" oninput="updateWaterPumpValue(this.value)">
             <label id="waterPumpLabel" for="waterPump">Pompa ciepła - ustawianie temperatury</label>
+            <input type="range" id="waterPumpSlider" min="10" max="30" oninput="updateWaterPumpValue(this.value)">
+            <label id="waterPumpValue">&nbsp;&nbsp;20</label>
             <button id="waterPumpConfirm" onclick="setWaterPumpTemp()">Potwierdź</button>
         </object>
         <object id="ironRemoverLayout">
