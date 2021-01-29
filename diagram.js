@@ -16,6 +16,15 @@ function renderChart(graphLabel, labels, data) {
                 data: data,
             }]
         },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        },
     });
 }
 
