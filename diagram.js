@@ -100,10 +100,16 @@ function drawChart()
         // Tutaj obróbka danych
         lines = data.split("\n");
         xAxisName = lines[0].split(",")[0]
-        //values = [data.split][]
-
-        console.log(xAxisName);
-
+        labels = [];
+        values = [];
+        var i;
+        for(i=1; i<lines.length; i++)
+        {
+            splitLine = lines[i].split(",");
+            labels.push(splitLine[0]);
+            values.push(parseFloat(splitLine[column]));
+            console.log(splitLine[0] + " " + splitLine[column]);
+        }
       });
-    renderChart(["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"], [20000, 14000, 12000, 15000, 18000, 19000, 22000]);
+    renderChart(labels, values);
 }
