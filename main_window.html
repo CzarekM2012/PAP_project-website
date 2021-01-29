@@ -29,13 +29,13 @@
         <button id="humidityButton" onclick="document.location.href = 'diagram.html?parameter=humidity'">Wilgotność</button>
         <button id="energyConsumptionButton" onclick="document.location.href = 'diagram.html?parameter=energyConsumption'">Zużycie prądu</button>
         <button id="energyGenerationButton" onclick="document.location.href = 'diagram.html?parameter=energyGeneration'">Generowanie prądu</button>
+        <button id="monitoringButton" onclick="document.location.href = 'recordings'">Monitoring</button>
         <object id="waterPumpLayout">
             <input type="range" id="waterPumpSlider" min="10" max="30" oninput="updateWaterPumpValue(this.value)">
             <label id="waterPumpValue">&nbsp;&nbsp;20</label>
             <label id="waterPumpLabel" for="waterPump">Pompa ciepła - ustawianie temperatury</label>
             <button id="waterPumpConfirm" onclick="setWaterPumpTemp()">Potwierdź</button>
         </object>
-        <button id="monitoringButton" onclick="document.location.href = 'recordings'">Monitoring</button>
         <object id="ironRemoverLayout">
             <button id="delayIronRemoverActivation" onclick="delayIronRemover()">+15 minut</button>
             <label id="ironRemoverActivationTimeLabel"> Czas uruchomienia odżelaziacza:<br></label>
