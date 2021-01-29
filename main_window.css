@@ -21,10 +21,8 @@ body
 {
     height: 25vh;
     width: 60vw;
-    //border: 2px solid black;
     display: inherit;
     grid-template-columns: repeat(4, 1fr);
-    //background: linear-gradient(cyan, pink);
     padding: 10px 5px 10px 5px;
 }
 
@@ -32,12 +30,9 @@ body
     width: fill;
     height: 15em;
     border: 0px solid black;
-    //border-radius: 12px;
-    //background-color: white;
     background: url("assets/display_circle.png") no-repeat scroll 0 0 transparent;
     background-size: 100%; /* To fill the dimensions of container (button), or */
-    //background-size: 40px auto; /* to specify dimensions explicitly */
-    margin: 0px 5px 0px 5px;
+    margin: 0px 10px 0px 10px;
     font: 1.6vw sans-serif;
     font-size: 1vw;
     color:white;
@@ -82,12 +77,6 @@ body
     border: 3px solid #000000;
     border-radius: 20px;
     font-size: 2vw;
-    //color:red;
-    text-shadow:
-    -0.03vw -0.03vw 0 #000,
-    0.03vw -0.03vw 0 #000,
-    -0.03vw 0.03vw 0 #000,
-    0.03vw 0.03vw 0 #000;
 }
 
 #buttonsLayout #sprinklersSwitch{
