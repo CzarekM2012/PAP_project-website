@@ -65,16 +65,16 @@ body
 
 #buttonsLayout{
     border-radius: 12px;
-    border: 2px solid black;
+    border: 2px solid #a7a7a7;
     /* background: linear-gradient(grey, white); */
-    background: linear-gradient(cyan, pink);
+    background: linear-gradient(#428fa7,  #073847);
     padding: 10px 10px 10px 10px;
 }
 
 #buttonsLayout button{
     background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
 	background-color:#ededed;
-    border: 3px solid #000000;
+    border: 3px solid #a7a7a7;
     border-radius: 20px;
     font-size: 2vw;
 }
@@ -98,7 +98,7 @@ body
     background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
 	background-color:#bab1ba;
     padding: 10px  10px 10px  10px ;
-    border: 3px solid #000000;
+    border: 3px solid#a7a7a7;
     border-radius: 20px;
     display: inherit;
     grid-template-columns: repeat(4, 1fr), min-content;
@@ -110,7 +110,7 @@ body
     background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
 	background-color:#bab1ba;
     padding: 10px  10px 10px  10px ;
-    border: 3px solid #000000;
+    border: 3px solid #a7a7a7;
     background-color: whitesmoke;
     border-radius: 20px;
     display: inherit;
