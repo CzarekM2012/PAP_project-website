@@ -6,6 +6,13 @@ function renderChart(graphLabel, labels, data) {
         options:
         {
             events: [],
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
         },
         data: {
             labels: labels,
@@ -15,15 +22,6 @@ function renderChart(graphLabel, labels, data) {
                 borderColor: "blue",
                 data: data,
             }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
         },
     });
 }
