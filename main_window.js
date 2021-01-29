@@ -57,6 +57,8 @@ function switchSprinklers(){
         sprinklerState = 1;
     }
 
+    console.log("Changed sprinklers state to " + sprinklerState)
+
 }
 
 fetch("data/air_temperature.txt")
