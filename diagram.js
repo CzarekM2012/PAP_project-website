@@ -13,5 +13,12 @@ document.getElementById("parameters").onchange = function(){
         document.getElementById("rooms").removeAttribute("disabled");
     }
 }
-
 parameter_select.value = parameterParam;
+if(parameterParam != "airTemperature" && parameterParam != "humidity")
+{
+    document.getElementById("rooms").setAttribute("disabled", "disabled");
+}
+else
+{
+    document.getElementById("rooms").removeAttribute("disabled");
+}
