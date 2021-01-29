@@ -1,44 +1,54 @@
 body
 {
     background-color: #073847;
+    height: 100%;
 }
 
-text
-{
-    font-size: 90%;
+#someGraphic{
+}
+
+
+#averagesLayout .button{
+    color:red;
+}
+
+
+#buttonsLayout{
+    padding: 10px 10px 10px 10px;
 }
 
 #buttonsLayout button{
     border-radius: 20px;
+    font-size: 200%;
+    color:red;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 #airTemperatureButton{
     background-color: cyan;
 }
 
-
-
-.value
-{
-    font-weight: bold;
-}
-
 #layout
 {
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-    gap: 10px;
     width: 60vw;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
 }
 
 #averagesLayout
 {
     display: inherit;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+}
+
+#averagesLayout text{
+    overflow-wrap: break-word;
 }
 
 #averagesLayout svg{
@@ -55,13 +65,15 @@ text
 #buttonsLayout
 {
     display: inherit;
-    grid-row: 3 / 6;
+    grid-row: 2 / 4;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
 }
 
 #waterPumpLayout
 {
+    background-color: whitesmoke;
+    border-radius: 20px;
     display: inherit;
     grid-template-columns: repeat(4, 1fr), min-content;
     grid-template-rows: repeat(3, 1fr);
@@ -69,6 +81,8 @@ text
 
 #ironRemoverLayout
 {
+    background-color: whitesmoke;
+    border-radius: 20px;
     display: inherit;
     grid-template-rows: repeat(2, 1fr);
 }
