@@ -7,34 +7,22 @@
 </head>
 <body id="layout">
     <p id="averagesLayout">
-        <svg width="15vw" height="11vw">
-            <rect x="3vw" y="1vw" width="9vw" height="9vw"
-            style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
-            <text x="3vw" y="2.5vw" fill="white">Średnia temperatura:</text>
-            <text x="6.5vw" y="7vw" fill="white">21*C</text>
-        </svg>
-        <svg width="15vw" height="11vw">
-            <rect x="3vw" y="1vw" width="9vw" height="9vw"
-            style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
-            <text x="3vw" y="2.5vw" fill="white">Średnia temperatura:</text>
-            <text x="6.5vw" y="7vw" fill="white">21*C</text>
-            
-        </svg>        
-        <svg width="15vw" height="11vw">
-            <rect x="3vw" y="1vw" width="9vw" height="9vw"
-            style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
-            <text x="3vw" y="2.5vw" fill="white">Średnia temperatura:</text>
-            <text x="6.5vw" y="7vw" fill="white">21*C</text>
-
-        </svg>        
-        <svg width="15vw" height="11vw">
-            <rect x="3vw" y="1vw" width="9vw" height="9vw"
-            style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
-            <text x="3vw" y="2.5vw" fill="white">Średnia temperatura:</text>
-            <text x="6.5vw" y="7vw" fill="white">21*C</text>
-
-        </svg>
-
+        <button id="roomTemperatureDisplay">
+            <label>Temperatura powietrza<br></label>
+            <h4>50*C</h4>
+        </button>
+        <button id="waterTemperatureDisplay">
+            <label>Temperatura wody<br></label>
+            <h4>30*C</h4>
+        </button>
+        <button id="powerUsageDisplay">
+            <label>Zużycie prądu<br></label>
+            <h4>1MW</h4>
+        </button>
+        <button id="powerDisplay">
+            <label>Prąd<br></label>
+            <h4>Tak</h4>
+        </button>
     <p id="buttonsLayout" style="background-color: white;">
         <button id="airTemperatureButton" onclick="goToAirTemperatureDiagrams">Temperatura powietrza</button>
         <button id="waterTemperatureButton" onclick="goToWaterTemperatureDiagram()">Temperatura wody</button>
@@ -43,7 +31,7 @@
         <button id="lightingSwitch" onclick="switchLighting()">Oświetlenie</button>
         <object id="waterPumpLayout">
             <input type="range" id="waterPumpSlider" min="20" max="50" onchange="updateOutput(this.value)">
-            <label id="waterPumpValue">liczba</label>
+            <label id="waterPumpValue">&nbsp;&nbsp;liczba</label>
             <label id="waterPumpLabel" for="waterPump">Pompa ciepła - ustawianie temperatury</label>
             <button id="waterPumpConfirm" onclick="setWaterPumpTemp()">Potwierdź</button>
         </object>
