@@ -32,6 +32,13 @@ function translateMinutesToDate(minutes){
     return ("" + hour + ":" + minute);
 }
 
+
+function setWaterPumpTemp(){    
+    console.log("Currently doesn't do anything as the website isn't connected to an actual smart home environment.");
+}
+
+
+
 function goToDiagram(room, parameter)
 {
     document.location.href = "diagram.html";
