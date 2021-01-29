@@ -18,6 +18,7 @@ function goToAirTemperatureDiagrams()
 
 function delayIronRemover(){
     ironTimestamp += 15;
+    document.getElementById("ironRemoverActivationTime").textContent = translateMinutesToDate(ironTimestamp);
     console.log("Changed iron remover delay to " + translateMinutesToDate(ironTimestamp));
 }
 
