@@ -42,3 +42,18 @@ else
     roomSelect.removeAttribute("disabled");
 }
 renderChart();
+
+
+fileName = "/data/power.txt"
+
+fetch(fileName)
+  .then(response => response.text())
+  .then(data => {
+    // Tutaj obróbka danych
+    lines = data.split("\n");
+    xAxisName = lines[0].split(",")[0]
+    //values = [data.split][]
+
+    console.log(xAxisName);
+
+  });
