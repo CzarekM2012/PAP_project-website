@@ -35,13 +35,13 @@
             <label id="waterPumpLabel" for="waterPump">Pompa ciepła - ustawianie temperatury</label>
             <button id="waterPumpConfirm" onclick="setWaterPumpTemp()">Potwierdź</button>
         </object>
-        <button id="monitoringButton" onclick="goToVideos()">Monitoring</button>
+        <button id="monitoringButton" onclick="document.location.href = 'recordings'">Monitoring</button>
         <object id="ironRemoverLayout">
             <button id="delayIronRemoverActivation" onclick="delayIronRemover()">+15min</button>
             <label id="ironRemoverActivationTimeLabel"> Czas uruchomienia odżelaziacza:<br></label>
             <label id="ironRemoverActivationTime"> 18:00 </label>
         </object>
-        <button id="sprinklersSwitch" onclick="switchSprinklers()">Spryskiwacze</button>
+        <button id="sprinklersSwitch" onclick="switchSprinklers()">Podlewanie</button>
     </p>
 </body>
 <script src="main_window.js"></script>
