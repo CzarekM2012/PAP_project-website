@@ -1,6 +1,9 @@
 body
 {
-    background-color: #073847;
+    background-image: url("assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-color: rgb(105, 104, 104);
     height: 100%;
 }
 
@@ -14,10 +17,13 @@ body
 
 
 #buttonsLayout{
+    border-radius: 12px;
+    border: 2px solid black;
     padding: 10px 10px 10px 10px;
 }
 
 #buttonsLayout button{
+    border: 3px solid #000000;
     border-radius: 20px;
     font-size: 200%;
     color:red;
@@ -26,6 +32,10 @@ body
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+#ironRemoverLayout button{
+    border-radius: 80px;
 }
 
 #airTemperatureButton{
@@ -43,12 +53,13 @@ body
 
 #averagesLayout
 {
+    border: 2px solid black;
     display: inherit;
     grid-template-columns: repeat(4, 1fr);
+    background-color: gray;
 }
 
 #averagesLayout text{
-    overflow-wrap: break-word;
 }
 
 #averagesLayout svg{
@@ -72,6 +83,8 @@ body
 
 #waterPumpLayout
 {
+    padding: 10px  10px 10px  10px ;
+    border: 3px solid #000000;
     background-color: whitesmoke;
     border-radius: 20px;
     display: inherit;
@@ -81,6 +94,8 @@ body
 
 #ironRemoverLayout
 {
+    padding: 10px  10px 10px  10px ;
+    border: 3px solid #000000;
     background-color: whitesmoke;
     border-radius: 20px;
     display: inherit;
