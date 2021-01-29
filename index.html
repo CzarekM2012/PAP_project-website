@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="main_window.css">
 <head>
     <meta charset="UTF-8">
-    <title>Prototype</title>
+    <title>Smart home controller</title>
 </head>
-<body bgcolor="#b3e3f2">
-    <p id="hello_message" color="000000">Hello World!!</p>
-    <button id="hello_button">Push</button>
+<body id="layout">
+    <p id="averagesLayout">
+        <button id="roomTemperatureDisplay">
+            <label>Temperatura powietrza<br></label>
+            <h4 id="roomTemperatureValue"></h4>
+        </button>
+        <button id="waterTemperatureDisplay">
+            <label>Temperatura wody<br></label>
+            <h4 id="waterTemperatureValue"></h4>
+        </button>
+        <button id="powerUsageDisplay">
+            <label>Zużycie prądu<br></label>
+            <h4 id="powerUsedValue"></h4>
+        </button>
+        <button id="powerDisplay">
+            <label>Prąd<br></label>
+            <h4>Tak</h4>
+        </button>
+    <p id="buttonsLayout">
+        <button id="airTemperatureButton" onclick="document.location.href = 'diagram.html?parameter=airTemperature'">Temperatura powietrza</button>
+        <button id="waterTemperatureButton" onclick="document.location.href = 'diagram.html?parameter=waterTemperature'">Temperatura wody</button>
+        <button id="humidityButton" onclick="document.location.href = 'diagram.html?parameter=humidity'">Wilgotność</button>
+        <button id="energyConsumptionButton" onclick="document.location.href = 'diagram.html?parameter=energyConsumption'">Zużycie prądu</button>
+        <button id="energyGenerationButton" onclick="document.location.href = 'diagram.html?parameter=energyGeneration'">Generowanie prądu</button>
+        <button id="monitoringButton" onclick="document.location.href = 'recordings'">Monitoring</button>
+        <object id="waterPumpLayout">
+            <input type="range" id="waterPumpSlider" min="10" max="30" oninput="updateWaterPumpValue(this.value)">
+            <label id="waterPumpValue">&nbsp;&nbsp;20</label>
+            <label id="waterPumpLabel" for="waterPump">Pompa ciepła - ustawianie temperatury</label>
+            <button id="waterPumpConfirm" onclick="setWaterPumpTemp()">Potwierdź</button>
+        </object>
+        <object id="ironRemoverLayout">
+            <label id="ironRemoverActivationTimeLabel"> Czas uruchomienia odżelaziacza:<br></label>
+            <label id="ironRemoverActivationTime"> 18:00 </label>
+            <button id="delayIronRemoverActivation" onclick="delayIronRemover()">+15 minut</button>
+        </object>
+        <button id="sprinklersSwitch" onclick="switchSprinklers()">Podlewanie</button>
+    </p>
 </body>
-<script src="script.js"></script>
+<script src="main_window.js"></script>
 </html>
