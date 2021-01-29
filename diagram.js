@@ -20,7 +20,7 @@ const parameterParam = urlParams.get('parameter');
 
 parameterSelect = document.getElementById("parameters");
 roomSelect = document.getElementById("rooms");
-parameterSelect.onchange = function(){
+parameterSelect.oninput = function(){
     if(!["airTemperature", "humidity"].includes(this.value))
     {
         roomSelect.setAttribute("disabled", "disabled");
@@ -31,7 +31,7 @@ parameterSelect.onchange = function(){
     }
     drawChart();
 }
-roomSelect.onchange = function(){drawChart();}
+roomSelect.oninput = function(){drawChart();}
 parameterSelect.value = parameterParam;
 if(!["airTemperature", "humidity"].includes(parameterParam))
 {
@@ -93,6 +93,7 @@ function drawChart()
         default:
             return;
     }
+    console.log(column);
     if(column==-1){return;}
     fetch(fileName)
       .then(response => response.text())
@@ -110,6 +111,6 @@ function drawChart()
             values.push(parseFloat(splitLine[column]));
             console.log(splitLine[0] + " " + splitLine[column]);
         }
+        renderChart(labels, values);
       });
-    renderChart(labels, values);
 }
