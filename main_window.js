@@ -59,6 +59,29 @@ function switchSprinklers(){
 
 }
 
-//button.addEventListener("click", function () {alert("Klikanie działa")})
-
+fetch("data/air_temperature.txt")
+    .then(response => response.text())
+    .then(data => {
+      lines = data.split("\n");
+      values = lines[lines.length -1].split(",");
+      value = 0
+      for(i=1; i<values.length; i++)
+      {
+          value += parseFloat(values[i]);
+      }
+      value /= (values.length-1);
+      document.getElementById("roomTemperatureValue").innerHTML = value.toString()+"*C";
+    });
+fetch("data/water_temperature.txt")
+    .then(response => response.text())
+    .then(data => {
+      lines = data.split("\n");
+      document.getElementById("waterTemperatureValue").innerHTML = lines[lines.length -1].split(",")[1].toString()+"*C";
+    });
+fetch("data/power.txt")
+    .then(response => response.text())
+    .then(data => {
+      lines = data.split("\n");
+      document.getElementById("powerUsedValue").innerHTML = values = lines[lines.length -1].split(",")[1].toString()+"MW";
+    });
 

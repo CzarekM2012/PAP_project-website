@@ -98,12 +98,10 @@ function drawChart()
     fetch(fileName)
       .then(response => response.text())
       .then(data => {
-        // Tutaj obróbka danych
         lines = data.split("\n");
         xAxisName = lines[0].split(",")[0]
         labels = [];
         values = [];
-        var i;
         for(i=1; i<lines.length; i++)
         {
             splitLine = lines[i].split(",");
