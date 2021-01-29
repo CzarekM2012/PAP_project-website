@@ -67,7 +67,7 @@ fetch("data/air_temperature.txt")
       lines = data.split("\n");
       values = lines[lines.length -1].split(",");
       value = 0
-      for(i=1; i<values.length; i++)
+      for(i=1; i<values.length-1; i++)
       {
           value += parseFloat(values[i]);
       }
