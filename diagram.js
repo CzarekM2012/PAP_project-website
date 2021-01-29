@@ -1,24 +1,44 @@
+
+function renderChart() {
+    var ctx = document.getElementById("chart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"],
+            datasets: [{
+                label: 'This week',
+                backgroundColor: "transparent",
+                borderColor: "blue",
+                data: [20000, 14000, 12000, 15000, 18000, 19000, 22000],
+            }]
+        },
+    });
+}
+
 const urlParams = new URLSearchParams(window.location.search);
 const parameterParam = urlParams.get('parameter');
 
-parameter_select = document.getElementById("parameters");
-
-document.getElementById("parameters").onchange = function(){
+parameterSelect = document.getElementById("parameters");
+roomSelect = document.getElementById("rooms");
+parameterSelect.onchange = function(){
     if(this.value != "airTemperature" && this.value != "humidity")
     {
-        document.getElementById("rooms").setAttribute("disabled", "disabled");
+        roomSelect.setAttribute("disabled", "disabled");
     }
     else
     {
-        document.getElementById("rooms").removeAttribute("disabled");
+        roomSelect.removeAttribute("disabled");
     }
+    renderChart();
 }
-parameter_select.value = parameterParam;
+roomSelect.onchange = function(){renderChart();}
+parameterSelect.value = parameterParam;
 if(parameterParam != "airTemperature" && parameterParam != "humidity")
 {
-    document.getElementById("rooms").setAttribute("disabled", "disabled");
+    roomSelect.setAttribute("disabled", "disabled");
 }
 else
 {
-    document.getElementById("rooms").removeAttribute("disabled");
+    roomSelect.removeAttribute("disabled");
 }
+renderChart();
