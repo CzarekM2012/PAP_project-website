@@ -4,6 +4,7 @@ body
     size: 100vh;
 }
 
+
 #layout
 {
     display: grid;
@@ -40,4 +41,11 @@ body
     background-color: white;
     grid-row: 2/11;
     grid-column: 1/6;
+}
+
+
+#layout #returnButton{
+    font: 2em fantasy;
+    background: rgb(192, 108, 108);
+    border: 0.1em solid white;
 }
