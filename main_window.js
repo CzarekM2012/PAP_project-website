@@ -71,7 +71,7 @@ fetch("data/air_temperature.txt")
       {
           value += parseFloat(values[i]);
       }
-      value /= (values.length-1);
+      value /= (values.length-2);
       document.getElementById("roomTemperatureValue").innerHTML = value.toString()+"*C";
     });
 fetch("data/water_temperature.txt")
