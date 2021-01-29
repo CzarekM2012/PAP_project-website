@@ -84,6 +84,6 @@ fetch("data/power.txt")
     .then(response => response.text())
     .then(data => {
       lines = data.split("\n");
-      document.getElementById("powerUsedValue").innerHTML = values = lines[lines.length -1].split(",")[1].toString()+"MW";
+      document.getElementById("powerUsedValue").innerHTML = values = lines[lines.length -1].split(",")[1].toString()+"W";
     });
 

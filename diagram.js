@@ -101,12 +101,12 @@ function drawChart()
             break;
         case "energyConsumption":
             fileName += "power.txt";
-            label = "zużycie prądu [MW]";
+            label = "zużycie prądu [W]";
             column = 1;
             break;
         case "energyGeneration":
             fileName += "power.txt";
-            label = "generowanie prądu [MW]";
+            label = "generowanie prądu [W]";
             column = 2;
             break;
         default:
