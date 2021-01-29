@@ -4,6 +4,7 @@
 function updateWaterPumpValue(value){
     // \u00a0 is a non-breaking space
     document.getElementById("waterPumpValue").textContent = "\u00a0\u00a0" + value;
+    console.log("Changed water pump value to " + value);
 }
 
 function goToAirTemperatureDiagrams()
