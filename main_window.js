@@ -45,6 +45,20 @@ function goToDiagram(room, parameter)
     //document.getElementById("parameters").value = "waterTemperature";
 }
 
+sprinklerState = 0
+function switchSprinklers(){
+    if(sprinklerState == 1){
+        document.getElementById("sprinklersSwitch").style.background='rgb(148, 63, 63)';
+        sprinklerState = 0;
+    }
+
+    else if(sprinklerState == 0){
+        document.getElementById("sprinklersSwitch").style.background='green';
+        sprinklerState = 1;
+    }
+
+}
+
 //button.addEventListener("click", function () {alert("Klikanie działa")})
 
 
