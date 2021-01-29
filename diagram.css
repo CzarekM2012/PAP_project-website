@@ -41,34 +41,3 @@ body
     grid-row: 2/11;
     grid-column: 1/6;
 }
-
-/*#hello_message
-{
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    width: 50%;
-    font-size: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(8, 105, 241);
-    text-align: center;
-}
-
-#hello_button
-{
-    margin: auto;
-    width: 100%;
-    cursor: pointer;
-    background-color: beige;
-    color: black;
-    border-radius: 4px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    padding: 30px 150px;
-}
-
-#hello_button:hover
-{
-    background-color: black;
-    color:beige;
-}*/

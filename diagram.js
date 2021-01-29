@@ -21,7 +21,7 @@ const parameterParam = urlParams.get('parameter');
 parameterSelect = document.getElementById("parameters");
 roomSelect = document.getElementById("rooms");
 parameterSelect.onchange = function(){
-    if(this.value != "airTemperature" && this.value != "humidity")
+    if(!["airTemperature", "humidity"].includes(this.value))
     {
         roomSelect.setAttribute("disabled", "disabled");
     }
@@ -33,7 +33,7 @@ parameterSelect.onchange = function(){
 }
 roomSelect.onchange = function(){renderChart();}
 parameterSelect.value = parameterParam;
-if(parameterParam in ["airTemperature", "humidity"])
+if(!["airTemperature", "humidity"].includes(parameterParam))
 {
     roomSelect.setAttribute("disabled", "disabled");
 }
