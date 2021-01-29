@@ -32,10 +32,31 @@ function translateMinutesToDate(minutes){
     return ("" + hour + ":" + minute);
 }
 
+
+function setWaterPumpTemp(){    
+    console.log("Currently doesn't do anything as the website isn't connected to an actual smart home environment.");
+}
+
+
+
 function goToDiagram(room, parameter)
 {
     document.location.href = "diagram.html";
     //document.getElementById("parameters").value = "waterTemperature";
+}
+
+sprinklerState = 0
+function switchSprinklers(){
+    if(sprinklerState == 1){
+        document.getElementById("sprinklersSwitch").style.background='linear-gradient(rgb(148, 63, 63), rgb(200, 63, 63) )';
+        sprinklerState = 0;
+    }
+
+    else if(sprinklerState == 0){
+        document.getElementById("sprinklersSwitch").style.background='linear-gradient(green, lightgreen)';
+        sprinklerState = 1;
+    }
+
 }
 
 //button.addEventListener("click", function () {alert("Klikanie działa")})
