@@ -48,12 +48,12 @@ function goToDiagram(room, parameter)
 sprinklerState = 0
 function switchSprinklers(){
     if(sprinklerState == 1){
-        document.getElementById("sprinklersSwitch").style.background='rgb(148, 63, 63)';
+        document.getElementById("sprinklersSwitch").style.background='linear-gradient(rgb(148, 63, 63), rgb(200, 63, 63) )';
         sprinklerState = 0;
     }
 
     else if(sprinklerState == 0){
-        document.getElementById("sprinklersSwitch").style.background='green';
+        document.getElementById("sprinklersSwitch").style.background='linear-gradient(green, lightgreen)';
         sprinklerState = 1;
     }
 
