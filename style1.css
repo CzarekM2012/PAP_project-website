@@ -8,6 +8,10 @@ text
     font-size: 90%;
 }
 
+#buttonsLayout button{
+    border-radius: 20px;
+}
+
 #airTemperatureButton{
     background-color: cyan;
 }
@@ -35,6 +39,13 @@ text
     display: inherit;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+}
+
+#averagesLayout svg{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 #someGraphic
