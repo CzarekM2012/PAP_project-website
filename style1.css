@@ -19,7 +19,6 @@ body
     grid-template-columns: repeat(4, 1fr);
     background-color: gray;
     padding: 10px 5px 10px 5px;
- 
 }
 
 #averagesLayout button{
