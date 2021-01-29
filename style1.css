@@ -1,13 +1,18 @@
 body
 {
     background-color: #073847;
-    size: 100vh;
 }
 
 text
 {
     font-size: 90%;
 }
+
+#airTemperatureButton{
+    background-color: cyan;
+}
+
+
 
 .value
 {
@@ -19,6 +24,10 @@ text
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     gap: 10px;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
 }
 
 #averagesLayout
