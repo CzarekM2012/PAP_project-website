@@ -1,8 +1,7 @@
 //const button = document.getElementById("airTemperatureButton");
 //const waterPumpValue = document.getElementById("waterPumpValue");
 
-ironDelay = 0;
-
+ironTimestamp = 1080;
 
 function updateWaterPumpValue(value){
     // \u00a0 is a non-breaking space
@@ -18,8 +17,18 @@ function goToAirTemperatureDiagrams()
 }
 
 function delayIronRemover(){
-    ironDelay += 15;
-    console.log("Changed iron remover delay to " + ironDelay);
+    ironTimestamp += 15;
+    console.log("Changed iron remover delay to " + translateMinutesToDate(ironTimestamp));
+}
+
+function translateMinutesToDate(minutes){
+    minutes = minutes % 1440;
+    hour = Math.floor(minutes / 60);
+    minute = minutes %60;
+    if(minute == 0){
+        minute = "00"
+    }
+    return ("" + hour + ":" + minute);
 }
 
 function goToDiagram(room, parameter)

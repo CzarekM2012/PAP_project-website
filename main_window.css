@@ -127,6 +127,19 @@ body
     grid-column: 1 / 4;
 }
 
+#waterPumpLabel{
+
+}
+
+#ironRemoverActivationTimeLabel{
+    text-align: center;
+}
+
+#ironRemoverActivationTime{
+    text-align: center;
+    font-size: 200%;
+}
+
 
 /*#hello_message
 {
