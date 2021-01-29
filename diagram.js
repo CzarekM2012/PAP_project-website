@@ -33,7 +33,7 @@ parameterSelect.onchange = function(){
 }
 roomSelect.onchange = function(){renderChart();}
 parameterSelect.value = parameterParam;
-if(parameterParam != "airTemperature" && parameterParam != "humidity")
+if(parameterParam in ["airTemperature", "humidity"])
 {
     roomSelect.setAttribute("disabled", "disabled");
 }
