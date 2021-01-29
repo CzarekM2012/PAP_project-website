@@ -110,6 +110,17 @@ body
     grid-template-rows: repeat(2, 1fr);
 }
 
+#ironRemoverActivationTimeLabel{
+    font-size: 150%;
+    text-align: center;
+}
+
+
+#ironRemoverActivationTime{
+    font-size: 200%;
+    text-align: center;
+}
+
 #waterPumpSlider
 {
     grid-column: 1 / 3;
