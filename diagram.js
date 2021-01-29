@@ -1,12 +1,16 @@
 
-function renderChart(labels, data) {
+function renderChart(graphLabel, labels, data) {
     var ctx = document.getElementById("chart").getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'line',
+        options:
+        {
+            events: [],
+        },
         data: {
             labels: labels,
             datasets: [{
-                label: 'This week',
+                label: graphLabel,
                 backgroundColor: "transparent",
                 borderColor: "blue",
                 data: data,
@@ -66,28 +70,34 @@ function getRoomColumn()
 
 function drawChart()
 {
-    fileName = "/data/"
-    column = -1
+    fileName = "/data/";
+    column = -1;
+    label = "";
     switch(parameterSelect.value)
     {
         case "airTemperature":
             fileName += "air_temperature.txt";
+            label = "temperatura powietrza [*C]";
             column = getRoomColumn();
             break;
         case "waterTemperature":
             fileName += "water_temperature.txt";
+            label = "temperatura wody [*C]";
             column = 1;
             break;
         case "humidity":
             fileName += "humidity.txt";
+            label = "wilgotność [%]";
             column = getRoomColumn();
             break;
         case "energyConsumption":
             fileName += "power.txt";
+            label = "zużycie prądu [MW]";
             column = 1;
             break;
         case "energyGeneration":
             fileName += "power.txt";
+            label = "generowanie prądu [MW]";
             column = 2;
             break;
         default:
@@ -109,6 +119,6 @@ function drawChart()
             values.push(parseFloat(splitLine[column]));
             console.log(splitLine[0] + " " + splitLine[column]);
         }
-        renderChart(labels, values);
+        renderChart(label, labels, values);
       });
 }
